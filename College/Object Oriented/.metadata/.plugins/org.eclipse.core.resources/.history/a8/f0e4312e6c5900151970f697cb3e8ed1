@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Problem_3 {
+	public static void main(String[] args){
+
+	System.out.println("Please enter a date in the standard US date format");
+	System.out.println("mm/dd/yy");
+	System.out.println("\n>> ");
+	
+	
+	}
+}

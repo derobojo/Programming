@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Prob_2 {
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Please enter the string you would like decyphered");
+		System.out.print(">> ");
+		String encryption = keyboard.next();
+		System.out.println("If you know the decypher key please enter it");
+		System.out.println("If you do not know the key press enter");
+		System.out.print(">> ");
+		int key = keyboard.nextInt();
+		
+		if (key == 23)
+		{
+			System.out.println("Enter was entered");
+		}
+		else
+		{
+			System.out.println("Nothing");
+		}
+	}
+}

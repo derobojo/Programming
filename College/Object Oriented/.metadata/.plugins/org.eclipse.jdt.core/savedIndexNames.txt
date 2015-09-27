@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\killkelleyr\Documents\GitHub\Programming\College\Object Oriented\.metadata\.plugins\org.eclipse.jdt.core
+3037730555.index
+3256297069.index
+2768476762.index
+1664405848.index

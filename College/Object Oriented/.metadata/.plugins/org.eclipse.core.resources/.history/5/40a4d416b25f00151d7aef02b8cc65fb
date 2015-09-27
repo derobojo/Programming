@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Prob_2 {
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Please enter the string you would like decyphered");
+		System.out.println("All the posibilites will be shown below");
+		System.out.print(">> ");
+		String encryption = keyboard.next();
+		
+		int myLength = encryption.length();
+		
+		System.out.println("The possible Decryptions");
+		for (int key = 1; key < 26; key++)
+		{
+			String decryption = null;
+			
+			for(int phraseIndex =0; phraseIndex < myLength; phraseIndex++)
+			{
+				
+			}
+			
+			System.out.println(decryption);
+			
+		}
+		
+	}
+}

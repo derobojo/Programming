@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Problem_1 {
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		
+		int  charOfUnit = 0;
+		
+		
+		do{
+		System.out.println("This program will convert to either Fahrenheit or Celsius");
+		System.out.println("depending on which unit of temperature is given");
+		System.out.println("Please enter C or c to enter in Celsius or");
+		System.out.println("enter F or f to enter in Fahrenheit.");
+		System.out.print(">> ");
+		String unit = keyboard.next();
+		charOfUnit = unit.charAt(0);
+		}while((charOfUnit != 70)&&(charOfUnit != 102)&&(charOfUnit != 67)&&(charOfUnit != 99));
+		
+		System.out.println("Now enter the temperature in");
+		System.out.print(">> ");
+		float temp = keyboard.nextFloat();
+		
+		/*float convertedTemp = 0;
+		
+		if((charOfUnit == 70)||(charOfUnit == 102))
+		{
+			System.out.println("Your in Farenheit");
+		}
+		else if((charOfUnit == 67)||(charOfUnit == 99))
+		{
+			System.out.println("Your in Celsius");
+		}
+		else
+		{
+			System.out.println("You did not enter the correct format");
+		}*/
+		
+		
+	}
+
+}

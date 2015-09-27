@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Problem_1 {
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		char unit;
+		do{
+		System.out.println("This program will convert to either Fahrenheit or Celsius");
+		System.out.println("depending on which unit of temperature is given");
+		System.out.println("Please enter C or c to enter in Celsius or");
+		System.out.println("enter F or f to enter in Fahrenheit.");
+		System.out.print(">> ");
+		unit = keyboard.next().charAt(0);
+		
+		System.out.println("Now enter the temperature in");
+		System.out.print(">> ");
+		
+		}while(unit != )
+		
+		
+	}
+
+}

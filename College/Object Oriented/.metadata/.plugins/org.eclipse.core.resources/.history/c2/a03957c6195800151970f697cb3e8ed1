@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+public class Problem_2 {
+	public static void main(String[] args){
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Please enter a dollar and cent amount to be converted to coins");
+		System.out.print("$");
+		double toConvert = keyboard.nextDouble();
+		
+		System.out.println();
+		int money = toConvert*100;
+		//Initialize variables for the number of coins
+		int numQuarters = 0;
+		int numDimes = 0;
+		int numNickels = 0;
+		int numPennies = 0;
+		
+		//Debugging
+		double original = toConvert;
+		
+		numQuarters = toConvert / 25;
+		
+		//Math to change the initial variables
+		
+		/*while(toConvert > 0){
+			if(toConvert >= .25)
+					{
+						while(toConvert >= .25){
+							numQuarters++;
+							toConvert = toConvert - .25;
+							
+						}
+					}
+			else if(toConvert >= .1)
+			{
+				while(toConvert >= .1){
+					numDimes++;
+					toConvert = toConvert - .1;
+					break;
+				}
+			}
+			
+			else if(toConvert >= .05)
+			{
+				while(toConvert >= .05){
+					numNickels++;
+					toConvert = toConvert - .05;
+					break;
+				}
+			}
+			else if(toConvert >= .01)
+			{
+				while(toConvert > 0){
+					numPennies++;
+					toConvert = toConvert - .01;
+					System.out.println(toConvert);
+					break;
+				}
+			}
+			else{
+				break;
+			}
+		}*/
+		
+		System.out.println("Coins");
+		System.out.println();
+		System.out.println(numQuarters+" Quarters");
+		System.out.println(numDimes+" Dimes");
+		System.out.println(numNickels+" Nickels");
+		System.out.println(numPennies+" Pennies");
+		
+
+		
+	}
+
+}

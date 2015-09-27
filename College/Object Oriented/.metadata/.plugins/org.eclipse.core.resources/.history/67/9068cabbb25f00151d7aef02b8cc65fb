@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Prob_2 {
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		
+		//Portion of code which the user enters the string to be decrypted
+		System.out.println("Please enter the string you would like decyphered");
+		System.out.println("All the posibilites will be shown below");
+		System.out.print(">> ");
+		String encryption = keyboard.next();
+		
+		int myLength = encryption.length();
+		
+		System.out.println("You can now look through the possible decryptions");
+		
+		//Math section to decode cipher
+		
+		//The first for loop goes through the different possible decryptions
+		for (int key = 1; key < 26; key++)
+		{
+			String decryption = "";
+			
+			for(int phraseIndex =0; phraseIndex < myLength; phraseIndex++)
+			{
+				int holder = 0;
+				int myChar = encryption.charAt(phraseIndex);
+				if((myChar >= 65) && (myChar <= 90))
+				{
+					if((myChar + key) > 90)
+					{
+						holder = myChar + key;
+						holder = holder - 91;
+						myChar = holder + 65;
+						decryption += (char)myChar;
+					}
+					else
+					{
+						myChar += key;
+						decryption += (char)myChar;
+					}
+				}
+				else if((myChar >= 97) && (myChar <= 122))
+				{
+					if((myChar + key) > 122)
+					{
+						holder = myChar + key;
+						holder = holder - 123;
+						myChar = holder + 97;
+						decryption += (char)myChar;
+					}
+					else{
+						myChar += key;
+						decryption += (char)myChar;
+					}
+				}
+				else
+				{
+					System.out.println("You did not enter a letter");
+				}
+			}
+			
+			System.out.println(decryption);
+			
+		}
+		
+	}
+}

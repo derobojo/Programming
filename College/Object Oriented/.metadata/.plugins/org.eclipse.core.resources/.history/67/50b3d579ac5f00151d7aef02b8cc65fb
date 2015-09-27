@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class Prob_1 {
+	public static void main(String[] args)
+	{
+	
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Welcome to the Caesar's Cipher");
+		System.out.println("Please enter a phrase you would like to be encrypted");
+		System.out.print(">> ");
+		String myPhrase = keyboard.next();
+		System.out.println("Please enter the key you wish to be used for decrypting (the shift)");
+		System.out.print(">> ");
+		int key = keyboard.nextInt();
+		
+		//The Encryption Method
+		int phraseIndex;
+		String myPhraseTrim = myPhrase.trim();
+		int myLength = myPhraseTrim.length();
+		String encryption = "";
+		
+		
+		for(phraseIndex =0; phraseIndex < myLength; phraseIndex++)
+		{
+			int holder = 0;
+			int myChar = myPhrase.charAt(phraseIndex);
+			if (key < 0)
+			{
+				if((myChar >= 65) && (myChar <= 90)) //Capital
+				{
+					if((myChar + key) < 65)
+					{
+						holder = myChar + key;
+						holder = 65 - holder;
+						myChar = 91 - holder;
+						encryption += (char)myChar;
+					}
+					else
+					{
+						myChar += key;
+						encryption += (char)myChar;
+					}
+				}
+				else if ((myChar >= 97) && (myChar <= 122)) //Lower case
+				{
+					if((myChar+key) < 97)
+					{
+						holder = myChar + key;
+						holder = 97 - holder;
+						myChar = 123 - holder;
+						encryption += (char)myChar;
+					}
+					else
+					{
+						myChar += key;
+						encryption+= (char)myChar;
+					}
+				}
+				
+			}
+			else if((myChar >= 65) && (myChar <= 90))
+			{
+				if((myChar + key) > 90)
+				{
+					holder = myChar + key;
+					holder = holder - 91;
+					myChar = holder + 65;
+					encryption += (char)myChar;
+					//System.out.println("It is a capital letter over the Z");
+				}
+				else
+				{
+					myChar += key;
+					encryption += (char)myChar;
+					//System.out.println("I dont have to do math now");
+				}
+			}
+			else if((myChar >= 97) && (myChar <= 122))
+			{
+				if((myChar + key) > 122)
+				{
+					holder = myChar + key;
+					holder = holder - 123;
+					myChar = holder + 97;
+					encryption += (char)myChar;
+					//System.out.println("It is a lower case letter and over the z");
+				}
+				else{
+					myChar += key;
+					encryption += (char)myChar;
+					//System.out.println("I dont have to do math yay");
+				}
+			}
+			else
+			{
+				System.out.println("You did not enter a letter");
+			}
+		}
+		
+		System.out.println("The encrypted message is: "+encryption);
+	}
+}

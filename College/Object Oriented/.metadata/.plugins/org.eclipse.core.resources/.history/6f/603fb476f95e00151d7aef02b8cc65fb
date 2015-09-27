@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Prob_1 {
+	public static void main(String[] args)
+	{
+	
+		Scanner keyboard = new Scanner(System.in);
+		int key = 2;
+		
+		System.out.println("Welcome to the Caesar's Cipher");
+		System.out.println("Please enter a phrase you would like to be encrypted");
+		System.out.print(">> ");
+		String myPhrase = keyboard.next();
+		System.out.println("Please enter the key you wish to be used for decrypting");
+		
+		//The Encryption Method
+		int phraseIndex;
+		String myPhraseTrim = myPhrase.trim();
+		int myLength = myPhraseTrim.length();
+		String encryption = "";
+		
+		
+		for(phraseIndex =0; phraseIndex < myLength; phraseIndex++)
+		{
+			int myChar = myPhrase.charAt(phraseIndex);
+			if((myChar >= 65) && (myChar <= 90))
+			{
+				if((myChar + key) > 90)
+				{
+					System.out.println("It is a capital letter over the Z");
+				}
+				else
+				{
+					System.out.println("I dont have to do math now");
+				}
+			}
+			else if((myChar >= 97) && (myChar <= 122))
+			{
+				if((myChar + key) > 122)
+				{
+					System.out.println("It is a lower case letter");
+				}
+			}
+			else
+			{
+				myChar += key;
+				encryption += (char)myChar;
+			}
+		}
+		
+		
+		System.out.println("Here it is: "+encryption);
+	}
+}
